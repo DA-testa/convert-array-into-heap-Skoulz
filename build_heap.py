@@ -1,6 +1,6 @@
 # python3
 
-#Artjoms Sidorkins
+#221RDB060 Artjoms Sidorkins
 
 def build_heap(users_data):
     swaps = []
@@ -37,6 +37,7 @@ def main():
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
 
+    
     users_input = input()
     if "I" in users_input:
         n = int(input())
