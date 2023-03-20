@@ -6,8 +6,8 @@ def heap(i, n, users_data, swaps):
     n = len(users_data)
     min = i
         
-    first = 2 * min + 1
-    second = 2 * min + 2
+    first = 2 * i + 1
+    second = 2 * i + 2
 
     if first < n and users_data[first] < users_data[min]:
             min = first
@@ -17,7 +17,6 @@ def heap(i, n, users_data, swaps):
     if i != min:
         users_data[i], users_data[min] = users_data[min], users_data[i]
         swaps.append((i, min))
-        users_data[i], users_data[min] = users_data[min], users_data[i]
         heap(min, n, users_data, swaps)
 
 
