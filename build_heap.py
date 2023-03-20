@@ -2,15 +2,7 @@
 
 #221RDB060 Artjoms Sidorkins
 
-def build_heap(users_data):
-    swaps = []
-
-    n = len(users_data)
-    for i in range(n // 2 - 1, -1, -1):
-        heap(i, users_data, swaps)
-    return swaps 
-
-def heap(i, users_data, swaps):
+def heap(i, n, users_data, swaps):
     n = len(users_data)
     min = i
         
@@ -26,8 +18,16 @@ def heap(i, users_data, swaps):
         users_data[i], users_data[min] = users_data[min], users_data[i]
         swaps.append((i, min))
         users_data[i], users_data[min] = users_data[min], users_data[i]
-        heap(min, users_data, swaps)
+        heap(min, n, users_data, swaps)
 
+
+def build_heap(users_data):
+    swaps = []
+
+    n = len(users_data)
+    for i in range(n // 2 - 1, -1, -1):
+        heap(i, n, users_data, swaps)
+    return swaps 
 
 
 
